@@ -46,6 +46,7 @@ export default function Cadastro() {
       <TextInput
       style={styles.input}
         placeholder="Cpf"
+        keyboardType="numeric"
         value={user.cpf}
         onChangeText={(value) => {
           setUser({ ...user, cpf: value });
@@ -71,6 +72,7 @@ export default function Cadastro() {
             <TextInput
       style={styles.input}
         placeholder="Data de nascimento"
+        keyboardType="numeric"
         value={user.data_nascimento}
         onChangeText={(value) => {
           setUser({ ...user, data_nascimento: value });
