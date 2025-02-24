@@ -5,10 +5,10 @@ const api = axios.create({
     headers:{
         'accept':'application/json'
     }
-});
+})
 
 const sheets = {
-    postLogin:(user)=>api.post("login/", user)
+    postLogin:(user)=>api.post("login/",user),
+    postCadastro: (user) => api.post("user/", user)
 }
-
 export default sheets;
