@@ -24,6 +24,7 @@ export default function Cadastro({ navigation }) {
       (response) => {
         console.log(response.data.message);
         Alert.alert("OK", response.data.message);
+        navigation.navigate("Login");
       },
       (error) => {
         console.log(error.response.data.error);
@@ -82,6 +83,7 @@ export default function Cadastro({ navigation }) {
       <TouchableOpacity onPress={handleCadastro} style={styles.button}>
         <Text>Entrar</Text>
       </TouchableOpacity>
+
       <Button title="Voltar para Login" onPress={()=> navigation.navigate("Login")}/>
     </View>
   );
@@ -108,5 +110,6 @@ const styles = StyleSheet.create({
     backgroundColor: "red",
     padding: 10,
     borderRadius: 5,
+    margin: 5
   },
 });

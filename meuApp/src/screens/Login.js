@@ -21,6 +21,7 @@ export default function Login({ navigation }) {
         (response)=>{
             console.log(response.data.message)
             Alert.alert('OK',response.data.message)
+            navigation.navigate("Home");
         },(error)=>{
             console.log(error.response.data.error)
             Alert.alert('Erro', error.response.data.error)
@@ -49,7 +50,7 @@ export default function Login({ navigation }) {
           setUser({ ...user, password: value });
         }}
       ></TextInput>
-      <TouchableOpacity onPress={handleLogin} style={styles.button}>
+      <TouchableOpacity onPress={handleLogin} style={styles.button} >
         <Text>Entrar</Text>
       </TouchableOpacity>
       <Button title="Cadastro" onPress={()=> navigation.navigate("Cadastro")}/>
@@ -77,6 +78,7 @@ const styles = StyleSheet.create({
   button:{
     backgroundColor:"red",
     padding:10,
-    borderRadius:5
+    borderRadius:5,
+    margin:5,
   }
 });
