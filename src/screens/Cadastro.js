@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { use, useState } from "react";
 import {
   View,
   Text,
@@ -9,8 +9,10 @@ import {
   Button
 } from "react-native";
 import api from "../axios/axios";
+import {useNavigation} from "@react-navigation/native"
 
-export default function Cadastro({ navigation }) {
+export default function Cadastro() {
+  const navigation = useNavigation();
   const [user, setUser] = useState({
     name: "",
     cpf: "",
