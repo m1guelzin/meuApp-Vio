@@ -25,7 +25,7 @@ export default function Login() {
       (response) => {
         console.log(response.data.message);
         Alert.alert("OK", response.data.message);
-        navigation.navigate("Home");
+        navigation.navigate("EventosScreen");
       },
       (error) => {
         console.log(error.response.data.error);
