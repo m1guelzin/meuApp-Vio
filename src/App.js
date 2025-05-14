@@ -1,7 +1,7 @@
 import Login from "./screens/Login";
 import Cadastro from "./screens/Cadastro";
 import Home from "./screens/Home";
-// import CadastroEventoScreen from './screens/CadastroEventoScreen';
+ import CadastroEventoScreen from './screens/CadastroEventoScreen';
 // import CadastroOrganizadorScreen from './screens/CadastroOrganizadorScreen';
 // import CadastroIngressoScreen from './screens/CadastroIngressoScreen';
 // import TaskList from "./screens/TaskList";
@@ -38,6 +38,8 @@ export default function App() {
             </Layout>
           )}
         </Stack.Screen>
+
+        <Stack.Screen name="CadastroEventoScreen" component={CadastroEventoScreen} />
         
 
         {/* <Stack.Screen name="Home" component={Home}/>
